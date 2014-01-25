@@ -17,6 +17,8 @@ G = [64 * ones(256,128,'uint8') ,128 * ones(256,128,'uint8')];
 
 figure
 
+%%%%%%%%%%%%%%%%%%%% imtool vs figure??, 
+
 imtool(G)
 
 % Plot the histogram
@@ -33,6 +35,8 @@ Gd1 = im2double(G);
 % double does not scale
 
 Gd2 = double(G);
+
+%%%%%%%%%% differences between the two?
 
 % Adding uncorrelated 0 mean, sigma = 3 gaussian noise
 
