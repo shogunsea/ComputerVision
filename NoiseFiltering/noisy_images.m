@@ -50,17 +50,18 @@ Gn1 = imnoise(G,'gaussian',0, s*s);
 
 % Check mean & std
 
-mean(double(Gn1))
+mean(double(Gn1))%%%%%%%%% what will change after calling double on a variable that has alredy been doublised?(Gn1 = im2double(G))
+%%%%%% just the calculation, won't be used?
 
-std(double(Gn1))
+std(double(Gn1))%%%%  So.... this two functions should print 0 and 3.?
 
 % Using randn
 
 N = 3 * randn(size(Gd2));
 
-Gd2n = Gd2 + N;
+Gd2n = Gd2 + N;%%%%%% additive noise? why multiple by 3?
 
-surf(120:140,120:140,Gd2n(120:140,120:140))
+surf(120:140,120:140,Gd2n(120:140,120:140))  %%% plot the edge??
 
 Gn2 = uint8(Gd2n);
 
